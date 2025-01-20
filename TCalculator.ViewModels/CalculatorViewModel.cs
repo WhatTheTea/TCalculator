@@ -5,24 +5,33 @@ namespace TCalculator.ViewModels;
 
 public partial class CalculatorViewModel : ObservableObject
 {
-    [ObservableProperty]
     private decimal firstOperand;
-
-    [ObservableProperty]
     private decimal secondOperand;
 
+    public string FirstOperand
+    {
+        get => firstOperand.ToString();
+        set => firstOperand = decimal.Parse(value);
+    }
+
+    public string SecondOperand
+    {
+        get => secondOperand.ToString();
+        set => secondOperand = decimal.Parse(value);
+    }
+
     [ObservableProperty]
-    private decimal result;
+    private string result = string.Empty;
 
     [RelayCommand]
-    private void SumOperands() => SynchronizationContext.Current?.Send(_ => Result = FirstOperand + SecondOperand, null);
+    private void SumOperands() => SynchronizationContext.Current?.Post(_ => Result = (firstOperand + secondOperand).ToString(), null);
 
     [RelayCommand]
-    private void SubtractOperands() => SynchronizationContext.Current?.Send(_ => Result = FirstOperand - SecondOperand, null);
+    private void SubtractOperands() => SynchronizationContext.Current?.Post(_ => Result = (firstOperand - secondOperand).ToString(), null);
 
     [RelayCommand]
-    private void MultiplyOperands() => SynchronizationContext.Current?.Send(_ => Result = FirstOperand * SecondOperand, null);
+    private void MultiplyOperands() => SynchronizationContext.Current?.Post(_ => Result = (firstOperand * secondOperand).ToString(), null);
 
     [RelayCommand]
-    private void DivideOperands() => SynchronizationContext.Current?.Send(_ => Result = FirstOperand / SecondOperand, null);
+    private void DivideOperands() => SynchronizationContext.Current?.Post(_ => Result = (firstOperand / secondOperand).ToString(), null);
 }

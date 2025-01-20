@@ -10,6 +10,9 @@ using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
+
+using TCalculator.ViewModels;
+
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
@@ -23,14 +26,11 @@ namespace TCalculator.WinUI
     /// </summary>
     public sealed partial class MainWindow : Window
     {
+        public CalculatorViewModel ViewModel { get; } = new();
+
         public MainWindow()
         {
             this.InitializeComponent();
-        }
-
-        private void myButton_Click(object sender, RoutedEventArgs e)
-        {
-            myButton.Content = "Clicked";
         }
     }
 }

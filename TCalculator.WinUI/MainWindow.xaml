@@ -10,17 +10,29 @@
         Title="TCalculator.WinUI">
 
     <Grid>
-        <Grid.DataContext>
-            <vm:CalculatorViewModel />
-        </Grid.DataContext>
-
-        <StackPanel Orientation="Horizontal"
+        <StackPanel Orientation="Vertical"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center">
-            <Button x:Name="myButton"
-                    Click="myButton_Click">
-                Click Me
-            </Button>
+            <StackPanel Orientation="Horizontal">
+                <TextBox Text="{x:Bind ViewModel.FirstOperand, Mode=TwoWay}"
+                         InputScope="Number" />
+                <TextBox Text="{x:Bind ViewModel.SecondOperand, Mode=TwoWay}"
+                         InputScope="Number" />
+                <TextBox Text="{x:Bind ViewModel.Result, Mode=OneWay}"
+                         InputScope="Number"
+                         IsReadOnly="True" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Command="{x:Bind ViewModel.SumOperandsCommand}"
+                        Content="+" />
+                <Button Command="{x:Bind ViewModel.SubtractOperandsCommand}"
+                        Content="-" />
+                <Button Command="{x:Bind ViewModel.MultiplyOperandsCommand}"
+                        Content="*" />
+                <Button Command="{x:Bind ViewModel.DivideOperandsCommand}"
+                        Content="/" />
+
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>

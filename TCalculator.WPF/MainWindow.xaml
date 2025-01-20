@@ -14,5 +14,37 @@
         <vm:CalculatorViewModel />
     </Window.DataContext>
 
-    <Grid />
+    <Grid>
+        <StackPanel Orientation="Vertical"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <TextBox Text="{Binding FirstOperand, Mode=TwoWay}"
+                         Width="100"
+                         InputScope="Number" />
+                <TextBox Text="{Binding SecondOperand, Mode=TwoWay}"
+                         Width="100"
+                         InputScope="Number" />
+                <TextBox Text="{Binding Result, Mode=OneWay}"
+                         Width="100"
+                         InputScope="Number"
+                         IsReadOnly="True" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Command="{Binding SumOperandsCommand}"
+                        Width="50"
+                        Content="+" />
+                <Button Command="{Binding SubtractOperandsCommand}"
+                        Width="50"
+                        Content="-" />
+                <Button Command="{Binding MultiplyOperandsCommand}"
+                        Width="50"
+                        Content="*" />
+                <Button Command="{Binding DivideOperandsCommand}"
+                        Width="50"
+                        Content="/" />
+
+            </StackPanel>
+        </StackPanel>
+    </Grid>
 </Window>
