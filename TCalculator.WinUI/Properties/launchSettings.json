@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TCalculator.WinUI (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "TCalculator.WinUI (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
