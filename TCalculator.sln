@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCalculator.WinUI", "TCalculator.WinUI\TCalculator.WinUI.csproj", "{036853F0-0810-48D8-B8A1-5FB898F34042}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D6FE6CB9-5F8A-4159-9C45-A885B06B4DC9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCalculator.MSTest.WinUI", "TCalculator.MSTest.WinUI\TCalculator.MSTest.WinUI.csproj", "{D024BE5D-DB36-4712-9164-8F2FB670BF89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCalculator.Xunit.FlaUI", "TCalculator.Xunit.FlaUI\TCalculator.Xunit.FlaUI.csproj", "{765C4AAF-6847-40F3-8094-D77C935F1038}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -85,6 +87,18 @@ Global
 		{D024BE5D-DB36-4712-9164-8F2FB670BF89}.Release|x86.ActiveCfg = Release|x86
 		{D024BE5D-DB36-4712-9164-8F2FB670BF89}.Release|x86.Build.0 = Release|x86
 		{D024BE5D-DB36-4712-9164-8F2FB670BF89}.Release|x86.Deploy.0 = Release|x86
+		{765C4AAF-6847-40F3-8094-D77C935F1038}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{765C4AAF-6847-40F3-8094-D77C935F1038}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{765C4AAF-6847-40F3-8094-D77C935F1038}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{765C4AAF-6847-40F3-8094-D77C935F1038}.Debug|x64.Build.0 = Debug|Any CPU
+		{765C4AAF-6847-40F3-8094-D77C935F1038}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{765C4AAF-6847-40F3-8094-D77C935F1038}.Debug|x86.Build.0 = Debug|Any CPU
+		{765C4AAF-6847-40F3-8094-D77C935F1038}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{765C4AAF-6847-40F3-8094-D77C935F1038}.Release|ARM64.Build.0 = Release|Any CPU
+		{765C4AAF-6847-40F3-8094-D77C935F1038}.Release|x64.ActiveCfg = Release|Any CPU
+		{765C4AAF-6847-40F3-8094-D77C935F1038}.Release|x64.Build.0 = Release|Any CPU
+		{765C4AAF-6847-40F3-8094-D77C935F1038}.Release|x86.ActiveCfg = Release|Any CPU
+		{765C4AAF-6847-40F3-8094-D77C935F1038}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -94,5 +108,6 @@ Global
 		{A5D57158-8205-44DB-B15E-9F80F15B40FB} = {4F977725-4A9D-4564-A757-7FD75BB7C8FA}
 		{3206B9F4-23F8-4C0C-BE8F-00190A035D4E} = {4F977725-4A9D-4564-A757-7FD75BB7C8FA}
 		{D024BE5D-DB36-4712-9164-8F2FB670BF89} = {D6FE6CB9-5F8A-4159-9C45-A885B06B4DC9}
+		{765C4AAF-6847-40F3-8094-D77C935F1038} = {D6FE6CB9-5F8A-4159-9C45-A885B06B4DC9}
 	EndGlobalSection
 EndGlobal

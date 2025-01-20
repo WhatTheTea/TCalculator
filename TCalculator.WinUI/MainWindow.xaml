@@ -15,21 +15,28 @@
                     VerticalAlignment="Center">
             <StackPanel Orientation="Horizontal">
                 <TextBox Text="{x:Bind ViewModel.FirstOperand, Mode=TwoWay}"
+                         AutomationProperties.AutomationId="op1"
                          InputScope="Number" />
                 <TextBox Text="{x:Bind ViewModel.SecondOperand, Mode=TwoWay}"
+                         AutomationProperties.AutomationId="op2"
                          InputScope="Number" />
                 <TextBox Text="{x:Bind ViewModel.Result, Mode=OneWay}"
+                         AutomationProperties.AutomationId="res"
                          InputScope="Number"
                          IsReadOnly="True" />
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Button Command="{x:Bind ViewModel.SumOperandsCommand}"
+                        AutomationProperties.AutomationId="plus"
                         Content="+" />
                 <Button Command="{x:Bind ViewModel.SubtractOperandsCommand}"
+                        AutomationProperties.AutomationId="minus"
                         Content="-" />
                 <Button Command="{x:Bind ViewModel.MultiplyOperandsCommand}"
+                        AutomationProperties.AutomationId="mult"
                         Content="*" />
                 <Button Command="{x:Bind ViewModel.DivideOperandsCommand}"
+                        AutomationProperties.AutomationId="div"
                         Content="/" />
 
             </StackPanel>

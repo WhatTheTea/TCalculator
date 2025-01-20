@@ -24,14 +24,7 @@ namespace TCalculator.MSTest.WinUI
         [UITestMethod]
         public void TestMethod2()
         {
-            var vm = new CalculatorViewModel
-            {
-                FirstOperand = "10",
-                SecondOperand = "20"
-            };
-            vm.SumOperandsCommand.Execute(null); // Executes on UI thread
-            
-            vm.Result.ShouldBe("30"); // Fails, because MSTest does not provide async support :V
+            SynchronizationContext.Current.ShouldNotBeNull();
         }
     }
 }
