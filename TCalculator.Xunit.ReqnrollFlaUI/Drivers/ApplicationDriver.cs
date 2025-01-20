@@ -16,7 +16,9 @@ public class ApplicationDriver
 
     private static Application StartApplication()
     {
-        var app = Application.LaunchStoreApp("c08bc58a-61ca-4cee-a7ff-02963b7b1d8d_nxj8xnbr902qw!App");
+        // HACK:
+        var dir = Directory.GetParent(Environment.CurrentDirectory)?.Parent?.Parent?.Parent;
+        var app = Application.Launch(@$"{dir}\TCalculator.WPF\bin\Debug\net8.0-windows\TCalculator.WPF.exe");
         app.WaitWhileMainHandleIsMissing();
         return app;
     }

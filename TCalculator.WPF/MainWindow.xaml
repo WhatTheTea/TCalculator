@@ -21,27 +21,34 @@
             <StackPanel Orientation="Horizontal">
                 <TextBox Text="{Binding FirstOperand, Mode=TwoWay}"
                          Width="100"
+                         AutomationProperties.AutomationId="op1"
                          InputScope="Number" />
                 <TextBox Text="{Binding SecondOperand, Mode=TwoWay}"
                          Width="100"
+                         AutomationProperties.AutomationId="op2"
                          InputScope="Number" />
                 <TextBox Text="{Binding Result, Mode=OneWay}"
                          Width="100"
+                         AutomationProperties.AutomationId="res"
                          InputScope="Number"
                          IsReadOnly="True" />
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Button Command="{Binding SumOperandsCommand}"
                         Width="50"
+                        AutomationProperties.AutomationId="plus"
                         Content="+" />
                 <Button Command="{Binding SubtractOperandsCommand}"
                         Width="50"
+                        AutomationProperties.AutomationId="minus"
                         Content="-" />
                 <Button Command="{Binding MultiplyOperandsCommand}"
                         Width="50"
+                        AutomationProperties.AutomationId="mult"
                         Content="*" />
                 <Button Command="{Binding DivideOperandsCommand}"
                         Width="50"
+                        AutomationProperties.AutomationId="div"
                         Content="/" />
 
             </StackPanel>
