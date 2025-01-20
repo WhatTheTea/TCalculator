@@ -1,11 +1,7 @@
 {
   "profiles": {
     "TCalculator.WinUI": {
-      "commandName": "Project"
-    },
-    "WSL": {
-      "commandName": "WSL2",
-      "distributionName": ""
+      "commandName": "MsixPackage"
     }
   }
 }
